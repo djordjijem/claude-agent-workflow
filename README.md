@@ -67,3 +67,11 @@ CLAUDE.md                           workflow rules (template: fill in your proje
 4. Fill in the project sections of `CLAUDE.md` (stack, structure, commands, conventions).
 5. Requires `bash`, `git`, `jq` and GNU coreutils. The lint step assumes ESLint; set
    `lint_ext_re=''` to turn it off.
+
+## Credits
+
+The skills in `.claude/skills/`, the checklists in `.claude/references/` and the
+`security-auditor` agent (lightly adapted) come from Addy Osmani's
+[agent-skills](https://github.com/addyosmani/agent-skills), MIT licensed. 
+
+The hooks, the `code-reviewer` agent and the `CLAUDE.md` workflow are my own.
