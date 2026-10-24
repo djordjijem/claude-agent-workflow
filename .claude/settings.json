@@ -1,0 +1,7 @@
+{
+  "hooks": {
+    "Stop": [{ "hooks": [{ "type": "command", "command": "bash \"$CLAUDE_PROJECT_DIR\"/.claude/hooks/e2e-gate.sh check", "timeout": 600 }] }],
+    "PostToolUse": [{ "matcher": "Edit|Write|NotebookEdit", "hooks": [{ "type": "command", "command": "bash \"$CLAUDE_PROJECT_DIR\"/.claude/hooks/e2e-gate.sh mark-edit" }] }],
+    "SubagentStop": [{ "matcher": "code-reviewer|security-auditor", "hooks": [{ "type": "command", "command": "bash \"$CLAUDE_PROJECT_DIR\"/.claude/hooks/e2e-gate.sh record-review" }] }]
+  }
+}
